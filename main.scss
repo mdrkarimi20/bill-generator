@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "Yekan-Bakh-Medium";
+    src: url("./font/Yekan-Bakh-Medium.woff");
+}
+
+body {
+    direction: rtl;
+    font-family: "Yekan-Bakh-Medium";
+    font-weight: bold;
+    text-align: center;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+%flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 22.2px;
+    @extend %flex;
+}
+
+.name-food {
+    font-size: 17.4px;
+}
+
+#message {
+    position: relative;
+    top: 10px;
+    color: green;
+}
+
+#err {
+    position: relative;
+    top: 10px;
+    color: red;
+}

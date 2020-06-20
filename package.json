@@ -1,0 +1,24 @@
+{
+    "name": "bill-generator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "watch": "node-sass -o css scss -w",
+        "s": "sass main.scss main.css"
+    },
+    "devDependencies": {
+        "node-sass": "4.5.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mdrkarimi20/bill-generator.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mdrkarimi20/bill-generator/issues"
+    },
+    "homepage": "https://github.com/mdrkarimi20/bill-generator#readme"
+}

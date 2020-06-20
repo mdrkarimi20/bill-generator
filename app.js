@@ -1,4 +1,4 @@
-$('.btn-minuse').on('click', function(e) {
+$('.minuse').on('click', function(e) {
     e.preventDefault();
     var $this = $(this);
     var $input = $this.closest('div').find('input');
@@ -14,7 +14,7 @@ $('.btn-minuse').on('click', function(e) {
 
 });
 
-$('.btn-pluss').on('click', function(e) {
+$('.pluss').on('click', function(e) {
     e.preventDefault();
     var $this = $(this);
     var $input = $this.closest('div').find('input');
@@ -29,10 +29,10 @@ $('.btn-pluss').on('click', function(e) {
     $input.val(value);
 });
 
-$('.btn').on('click', function(e) {
+$('img').on('click', function(e) {
     $("#my-cart-table tr").each(function() {
         let val_quantity = $(this).find('#quantity').val();
-        let val_price = $(this).find('#price').text();
+        let val_price = parseInt($(this).find('#price').text());
         $(this).find('#total').text(val_quantity * val_price);
 
         $("#my-cart-table td").each(function(i) {

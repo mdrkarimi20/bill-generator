@@ -1,21 +1,19 @@
 @font-face {
-    font-family: "Yekan-Bakh-Medium";
-    src: url("../font/Yekan-Bakh-Medium.woff");
+    font-family: "yekan";
+    src: url('../fonts/Yekan.woff') format('woff')
 }
 
 body {
     direction: rtl;
-    font-family: "Yekan-Bakh-Medium";
     font-weight: bold;
     text-align: center;
 }
 
-*,
-*::after,
-*::before {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "yekan";
 }
 
 %flex {
@@ -26,12 +24,32 @@ body {
 
 .title {
     font-size: 22.2px;
+    font-weight: bold;
+    text-align: center;
     @extend %flex;
+}
+
+.modal-dialog {
+    width: 960px;
+    height: 1200px;
+    border: 6px solid rgba(241, 196, 15, 0.5);
+    border-radius: 48px;
+    margin-top: 48px;
+    padding: 16px 32px;
+}
+
+.modal-content {
+    border: white !important;
+    // width: 61vw !important;
+    // position: relative !important;
+    // left: 25px;
 }
 
 .name-food {
     font-size: 14px;
     width: 170px;
+    position: relative;
+    left: 23px;
     @extend %flex;
 }
 
@@ -59,4 +77,42 @@ body {
     position: relative;
     top: 10px;
     color: red;
+}
+
+#total {
+    position: relative;
+    top: 85px;
+    left: 20px;
+}
+
+#toman {
+    position: relative;
+    top: 85px;
+    left: 40px;
+}
+
+.my-product-remove {
+    position: relative;
+    left: 120px;
+}
+
+.input-group {
+    display: flex !important;
+    align-items: center !important;
+    .form-control {
+        position: relative;
+        left: 10px;
+    }
+}
+
+.pluss {
+    position: relative;
+    left: 45px;
+    bottom: 8px;
+}
+
+.minuse {
+    position: relative;
+    left: 55px;
+    top: 8px;
 }

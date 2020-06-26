@@ -42,15 +42,20 @@ $('img').on('click', function(e) {
         function calculateColumn(index) {
             let total = 0;
             $("#my-cart-table tr").each(function() {
-                let value = parseInt($('#total', this).eq(index).text());
+                let value = parseInt($('#total', this).eq(index).val());
                 if (!isNaN(value)) {
                     total += value;
                     $('#sum').val(total);
+                    let sum = parseInt($('#sum').val());
+                    let service = parseInt($('#service').val());
+                    let dis = parseInt($('#takhfif').val());
+                    $("#my-cart-grand-total").text(parseInt(sum + service - dis));
                 }
             });
         }
     });
 });
+
 
 $("body").on("click", "#remove", function() {
     $(this).parents("tr").remove();

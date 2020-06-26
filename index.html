@@ -106,35 +106,34 @@
                         </td>
                         <td title="Remove from Cart" class="text-center" id="remove" style="width: 30px;"><a href="javascript:void(0);" class="btn btn-xs btn-danger my-product-remove">X</a></td>
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr style="color: red">
-                        <td></td>
-                        <td><strong>Total (including discount)</strong></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <div class="form-group">
-                                <label for=""></label>
-                                <input type="text" class="form-control" placeholder="کد تخفیف">
-                                <span id="usernameError"></span>
-                                <span id="message"></span>
-                                <span id="err"></span>
+                    <tr title="summary 2" data-id="2" data-price="37000">
+                        <td class="text-center  p-1 m-0 border-top-none" style="width: 30px;"><img src="./img/dish.png" width="108px" height="107px"></td>
+                        <td class="pq p-0 m-0 pr-2">
+                            <span class="name-food">قیمه مکزیکی با سس آلفردو</span>
+                            <div class="price-table">
+                                <input type="number" title="Unit Price" id="price" class="p-0 m-0 border-none no-padding add-color text-right height-25" value="37000"><span>تومان</span>
+                            </div>
+                            <div title="Quantity">
+                                <div class="input-group" style="width:50%">
+                                    <input type="number" class="form-control p-0 m-0 no-padding add-color text-center height-25" maxlength="3" value="0" id="quantity">
+                                    <img src="./img/group.png" class="pluss" width="10px" height="10px">
+                                    <img src="./img/line-2.png" class="minuse" width="10px" height="1px">
+                                </div>
                             </div>
                         </td>
-                        <td></td>
+                        <td>
+                            <div class="total-table">
+                                <input type="number" title="Total" id="total" class="p-0 m-0 border-white no-padding add-color text-right height-25 my-product-total" value="37000"><span>تومان</span>
+                            </div>
+                        </td>
+                        <td title="Remove from Cart" class="text-center" id="remove" style="width: 30px;"><a href="javascript:void(0);" class="btn btn-xs btn-danger my-product-remove">X</a></td>
                     </tr>
                     <!-- </tbody> -->
                 </table>
                 <div class="row">
                     <div class="flex-column">
                         <div class="row">
-                            <div class="orders pr-5">
+                            <div class="orders pr-4 pr-4 mr-2">
                                 <div class="sum-orders">
                                     <span>جمع کل سفارشات</span>
                                 </div>
@@ -147,23 +146,34 @@
                             </div>
                             <div class="number-orders">
                                 <div>
-                                    <input type="number" class="p-0 m-0 border-none no-padding add-color text-center height-25" value="37000" id="sum"></span>تومان</span>
+                                    <input type="number" class="p-0 m-0 border-none no-padding add-color text-center height-25" value="820900" id="sum"><span>تومان</span>
                                 </div>
                                 <div>
-                                    <input type="number" class="p-0 m-0 border-none no-padding add-color text-center height-25" value="0" id="service"><span>تومان</span>
+                                    <input type="number" class="p-0 m-0 border-none no-padding add-color text-left height-25" value="20500" id="service"><span>تومان</span>
                                 </div>
                                 <div>
-                                    <input type="number" class="p-0 m-0 border-none no-padding add-color text-center height-25" value="0" id="takhfif"><span>تومان</span>
+                                    <input type="number" class="p-0 m-0 border-none no-padding add-color text-left height-25" value="34000" id="takhfif"><span>تومان</span>
                                 </div>
                             </div>
                         </div>
                         <div class="tatal-final">
-                            <strong id="my-cart-grand-total">150<span>تومان</span></strong>
+                            <strong id="my-cart-grand-total">894450</strong><span>تومان</span>
                         </div>
+                    </div>
+                    <div class="form-group pr-4">
+                        <label for=""></label>
+                        <div class="position-reletive">
+                            <input type="text" class="form-control" placeholder="کد تخفیف">
+                            <img src="./img/shape.PNG" class="shape" alt="shape" width="38.6px" height="38.6px">
+                        </div>
+                        <span id="usernameError"></span>
+                        <span id="message"></span>
+                        <span id="err"></span>
+                        <button type="submit" class="btn btn-submit">ثبت سفارش</button>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button><button type="button" class="btn btn-primary" id="checkout-my-cart">Checkout</button></div>
+            <!-- <div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button><button type="button" class="btn btn-primary" id="checkout-my-cart">Checkout</button></div> -->
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

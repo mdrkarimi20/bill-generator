@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "yekan";
+    font-family: yekan;
     src: url('../fonts/Yekan.woff') format('woff')
 }
 
@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "yekan";
+    font-family: yekan;
 }
 
 %flex {
@@ -29,6 +29,14 @@ body {
     @extend %flex;
 }
 
+.gradient {
+    width: 486px;
+    position: relative;
+    left: 7px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f4f4f4);
+    transform: rotate(-180deg);
+}
+
 .modal-dialog {
     width: 960px;
     height: 1200px;
@@ -40,17 +48,14 @@ body {
 
 .modal-content {
     border: white !important;
-    // width: 61vw !important;
-    // position: relative !important;
-    // left: 25px;
 }
 
-.name-food {
-    font-size: 14px;
-    width: 170px;
-    position: relative;
-    left: 23px;
-    @extend %flex;
+table tr:first-child td {
+    border-top-color: white;
+}
+
+table tr:nth-child(5) td {
+    border-top-color: white;
 }
 
 .pq {
@@ -58,13 +63,20 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-}
-
-.pluss-minuse {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
+    .name-food {
+        font-size: 17.4px;
+        font-weight: bold;
+        width: 170px;
+        position: relative;
+        left: 5px;
+        @extend %flex;
+    }
+    #price {
+        font-size: 17.4px;
+        font-weight: bold;
+        position: relative;
+        top: 10px;
+    }
 }
 
 #message {
@@ -81,38 +93,58 @@ body {
 
 #total {
     position: relative;
-    top: 85px;
-    left: 20px;
+    top: 60px;
+    right: 61px;
+    font-size: 22.8px;
+    font-weight: bold;
 }
 
 #toman {
     position: relative;
-    top: 85px;
-    left: 40px;
+    top: 65px;
+    right: 43px;
+    font-size: 17.4px;
+    font-weight: bold;
 }
 
 .my-product-remove {
     position: relative;
-    left: 120px;
+    left: 47px;
+    bottom: 2px;
 }
 
 .input-group {
     display: flex !important;
     align-items: center !important;
+    position: relative;
+    top: 12px;
     .form-control {
         position: relative;
-        left: 10px;
+        bottom: 4px;
+        font-size: 28.1px;
+        font-weight: bold;
     }
 }
 
 .pluss {
     position: relative;
-    left: 45px;
-    bottom: 8px;
+    left: 10px;
+    bottom: 12px;
+    object-fit: contain;
 }
 
 .minuse {
     position: relative;
-    left: 55px;
+    left: 20px;
     top: 8px;
+    object-fit: contain;
+}
+
+.Gradient {
+    width: 486px;
+    position: relative;
+    top: 477px;
+    left: 7px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f4f4f4);
+    transform: rotate(-180deg);
 }

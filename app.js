@@ -32,8 +32,8 @@ $('.pluss').on('click', function(e) {
 $('img').on('click', function(e) {
     $("#my-cart-table tr").each(function() {
         let val_quantity = $(this).find('#quantity').val();
-        let val_price = parseInt($(this).find('#price').text());
-        $(this).find('#total').text(val_quantity * val_price);
+        let val_price = parseInt($(this).find('#price').val());
+        $(this).find('#total').val(val_quantity * val_price);
 
         $("#my-cart-table td").each(function(i) {
             calculateColumn(i);
@@ -45,7 +45,7 @@ $('img').on('click', function(e) {
                 let value = parseInt($('#total', this).eq(index).text());
                 if (!isNaN(value)) {
                     total += value;
-                    $('#my-cart-grand-total').text(total);
+                    $('#sum').val(total);
                 }
             });
         }

@@ -46,30 +46,36 @@ $('img').on('click', function(e) {
                 if (!isNaN(value)) {
                     total += value;
                     $('#sum').val(total);
-                    let sum = parseInt($('#sum').val());
-                    let service = parseInt($('#service').val());
-                    let dis = parseInt($('#takhfif').val());
-                    $("#my-cart-grand-total").text(parseInt(sum + service - dis));
                 }
             });
         }
     });
 });
 
+$("#discount").on("change keyup blur", function() {
+    let sum = parseInt($('#sum').val());
+    let service = parseInt($('#service').val());
+    let dis = parseInt($('#takhfif').val());
+    let discount = {
+        dis2: 66666
+    };
+    for (let key in discount) {
+        Object.values(discount);
+    }
+    let discount_val = $("#discount").val();
+    if (discount_val == Object.values(discount)) {
+        $("#discount").css('background-color', '#caffff');
+        $(".shape").remove();
+        $(".correct").css('display', 'block')
+        $("#my-cart-grand-total").val(parseInt(sum + service - dis));
+    } else {
+        $("#discount").removeAttr('placeholder');
+        $("#discount").attr("placeholder", "wrong code");
+        $("#discount").css('background-color', 'rgba(231, 76, 60, 0.18)');
+        $("#my-cart-grand-total").val(parseInt(sum + service));
+    }
+});
 
 $("body").on("click", "#remove", function() {
     $(this).parents("tr").remove();
 });
-
-// $("#takfif").on
-
-
-// https://www.studentstutorial.com/jquery/jquery-calculate-discount
-// $(document).on("change keyup blur", "#chDiscount", function() {
-//     var main = $('#cBalance').val();
-//     var disc = $('#chDiscount').val();
-//     var dec = (disc / 100).toFixed(2); //its convert 10 into 0.10
-//     var mult = main * dec; // gives the value for subtract from main value
-//     var discont = main - mult;
-//     $('#result').val(discont);
-// });

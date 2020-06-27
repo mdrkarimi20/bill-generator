@@ -49,7 +49,7 @@ $('img').on('click', function(e) {
                     let sum = parseInt($('#sum').val());
                     let service = parseInt($('#service').val());
                     let dis = parseInt($('#takhfif').val());
-                    $("#my-cart-grand-total").text(parseInt(sum + service - dis));
+                    $("#my-cart-grand-total").val(parseInt(sum + service - dis));
                 }
             });
         }

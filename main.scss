@@ -1,19 +1,19 @@
 @font-face {
+    src: url("./font/Yekan.ttf");
     font-family: yekan;
-    src: url('../fonts/Yekan.woff') format('woff')
 }
 
 body {
     direction: rtl;
     font-weight: bold;
     text-align: center;
+    font-family: yekan;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: yekan;
 }
 
 %flex {
@@ -54,8 +54,8 @@ table tr:first-child td {
     border-top-color: white;
 }
 
-table tr:nth-child(5) td {
-    border-top-color: white;
+table tr:nth-child(6) td {
+    border-top-color: none;
 }
 
 .price-table {
@@ -67,8 +67,8 @@ table tr:nth-child(5) td {
     span {
         position: relative;
         top: 10px;
-        left: 10px;
-        font-size: 17.4px;
+        left: 20px;
+        font-size: 15px;
         font-weight: bold;
     }
 }
@@ -79,7 +79,7 @@ table tr:nth-child(5) td {
     align-items: flex-start;
     justify-content: space-between;
     .name-food {
-        font-size: 17.4px;
+        font-size: 15px;
         font-weight: bold;
         width: 170px;
         position: relative;
@@ -115,14 +115,14 @@ table tr:nth-child(5) td {
         top: 54px;
         font-size: 17.4px;
         font-weight: bold;
-        right: 27px;
+        right: 32px;
     }
 }
 
 #total {
     position: relative;
     top: 55px;
-    right: 42px;
+    right: 60px;
     font-size: 22.8px;
     font-weight: bold;
     width: 92px;
@@ -161,14 +161,14 @@ table tr:nth-child(5) td {
 
 .pluss {
     position: relative;
-    left: 10px;
+    left: 23px;
     bottom: 12px;
     object-fit: contain;
 }
 
 .minuse {
     position: relative;
-    left: 20px;
+    left: 33px;
     top: 8px;
     object-fit: contain;
 }
@@ -176,7 +176,7 @@ table tr:nth-child(5) td {
 .Gradient {
     width: 486px;
     position: relative;
-    top: 477px;
+    top: 585px;
     left: 7px;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f4f4f4);
     transform: rotate(-180deg);
@@ -219,8 +219,12 @@ table tr:nth-child(5) td {
 }
 
 .tatal-final {
-    font-size: 45.6px;
+    @extend %flex;
+    font-size: 40px;
     font-weight: bold;
+    #my-cart-grand-total {
+        width: 171px;
+    }
 }
 
 input {
@@ -234,7 +238,7 @@ input {
     flex-direction: column;
     justify-content: space-evenly;
     .form-control {
-        width: 215.2px;
+        width: 193px;
         height: 45.6px;
         border-radius: 22.8px;
         border: solid 1.2px #e67e22;
@@ -245,7 +249,7 @@ input {
         color: #e67e22;
     }
     .btn-submit {
-        width: 215.2px;
+        width: 193px;
         height: 67.9px;
         border-radius: 11.7px;
         background-color: #e67e22;
@@ -258,6 +262,6 @@ input {
 
 .shape {
     position: absolute;
-    bottom: 109px;
-    left: 6px;
+    bottom: 98px;
+    left: 0px;
 }

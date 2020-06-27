@@ -39,7 +39,7 @@ body {
 
 .modal-dialog {
     width: 960px;
-    height: 1200px;
+    height: 910px;
     border: 6px solid rgba(241, 196, 15, 0.5);
     border-radius: 48px;
     margin-top: 48px;
@@ -176,7 +176,7 @@ table tr:nth-child(6) td {
 .Gradient {
     width: 486px;
     position: relative;
-    top: 585px;
+    top: 602px;
     left: 7px;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f4f4f4);
     transform: rotate(-180deg);
@@ -193,7 +193,7 @@ table tr:nth-child(6) td {
         @extend %flex;
         justify-content: space-evenly;
         span {
-            font-size: 16.4px;
+            font-size: 14px;
             font-weight: bold;
         }
     }
@@ -205,25 +205,25 @@ table tr:nth-child(6) td {
     align-items: flex-start;
     flex-direction: column;
     height: 100px;
-    font-size: 21.1px;
+    font-size: 19.3px;
     font-weight: bold;
     #sum {
-        width: 80px;
+        width: 70px;
     }
     #service {
-        width: 80px;
+        width: 70px;
     }
     #takhfif {
-        width: 80px;
+        width: 70px;
     }
 }
 
 .tatal-final {
     @extend %flex;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
     #my-cart-grand-total {
-        width: 171px;
+        width: 146px;
     }
 }
 
@@ -236,12 +236,15 @@ input {
 .form-group {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    height: 17vhx;
     .form-control {
-        width: 193px;
+        width: 217px;
         height: 45.6px;
         border-radius: 22.8px;
         border: solid 1.2px #e67e22;
+        position: relative;
+        bottom: 10px;
     }
      ::placeholder {
         font-size: 21.1px;
@@ -249,7 +252,7 @@ input {
         color: #e67e22;
     }
     .btn-submit {
-        width: 193px;
+        width: 217px;
         height: 67.9px;
         border-radius: 11.7px;
         background-color: #e67e22;
@@ -262,6 +265,18 @@ input {
 
 .shape {
     position: absolute;
-    bottom: 98px;
-    left: 0px;
+    bottom: 102px;
+    left: 9px;
+}
+
+.Toman {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.correct {
+    display: none;
+    position: absolute;
+    bottom: 102px;
+    left: 13px;
 }

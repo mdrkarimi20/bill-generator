@@ -52,6 +52,39 @@ $('img').on('click', function(e) {
     });
 });
 
+$("#discount").on("change keyup blur", function() {
+    let sum = parseInt($('#sum').val());
+    let service = parseInt($('#service').val());
+    let dis = parseInt($('#takhfif').val());
+    let discount = {
+        dis1: "mammad33",
+        dis2: 66666
+    };
+    for (let key in discount) {
+        Object.values(discount);
+        let discount_val = $("#discount").val();
+        console.log($("#discount").val())
+        if (discount_val == discount.dis1) {
+            $("#discount").css('background-color', '#caffff');
+            $(".shape").css('display', 'none');
+            $(".correct").css('display', 'block');
+            $("#my-cart-grand-total").val(parseInt(sum + service - dis));
+        } else if (discount_val == discount.dis2) {
+            $("#discount").css('background-color', '#caffff');
+            $(".shape").css('display', 'none');
+            $(".correct").css('display', 'block')
+            $("#my-cart-grand-total").val(parseInt(sum + service - dis));
+        } else {
+            $("#discount").removeAttr('placeholder');
+            $(".shape").css('display', 'block');
+            $(".correct").css('display', 'none');
+            $("#discount").attr("placeholder", "wrong code");
+            $("#discount").css('background-color', 'rgba(231, 76, 60, 0.18)');
+            $("#my-cart-grand-total").val(parseInt(sum + service));
+        }
+    }
+});
+
 $("body").on("click", "#remove", function() {
     $(this).parents("tr").remove();
 });

@@ -87,4 +87,5 @@ $("#discount").on("change keyup blur", function() {
 
 $("body").on("click", "#remove", function() {
     $(this).parents("tr").remove();
+    $(this).find(".Gradient").remove();
 });

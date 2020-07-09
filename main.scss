@@ -50,6 +50,11 @@ body {
     border: white !important;
 }
 
+.table {
+    position: relative;
+    left: 19px;
+}
+
 table tr:first-child td {
     border-top-color: white;
 }
@@ -267,7 +272,7 @@ input {
     display: block;
     position: absolute;
     bottom: 102px;
-    left: 9px;
+    left: 2px;
 }
 
 .Toman {
@@ -279,5 +284,5 @@ input {
     display: none;
     position: absolute;
     bottom: 102px;
-    left: 13px;
+    left: 6px;
 }

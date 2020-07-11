@@ -1,13 +1,13 @@
 @font-face {
-    src: url("./font/Yekan.ttf");
     font-family: yekan;
+    src: url('../font/Yekan.ttf') format('truetype')
 }
 
 body {
     direction: rtl;
     font-weight: bold;
     text-align: center;
-    font-family: yekan;
+    font-family: yekan !important;
 }
 
 * {
@@ -23,40 +23,59 @@ body {
 }
 
 .title {
-    font-size: 22.2px;
+    font-size: 1.3rem;
     font-weight: bold;
     text-align: center;
     @extend %flex;
 }
 
-.gradient {
-    width: 486px;
-    position: relative;
-    left: 7px;
-    top: 16px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f4f4f4);
+.modal-body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 63vh;
 }
 
 .modal-dialog {
-    width: 960px;
-    height: 910px;
-    border: 6px solid rgba(241, 196, 15, 0.5);
+    @extend %flex;
+    height: 94.5vh;
+    border: 0.4rem solid rgba(241, 196, 15, 0.5);
     border-radius: 48px;
-    margin-top: 48px;
-    padding: 16px 32px;
 }
 
 .modal-content {
     border: white !important;
 }
 
-.table {
+.shadow-table {
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    bottom: 95%;
+    right: 0;
+    z-index: 1;
+    transform: rotate(-180deg);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f4f4f4);
+}
+
+.row5 {
     position: relative;
-    left: 19px;
+    .shadow-table2 {
+        width: 370%;
+        height: 2rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f4f4f4);
+    }
+}
+
+.table td {
+    padding: 1rem 0 0 !important;
 }
 
 table tr:first-child td {
     border-top-color: white;
+    padding: .75rem 0 0 !important;
 }
 
 table tr:nth-child(6) td {
@@ -64,16 +83,13 @@ table tr:nth-child(6) td {
 }
 
 .price-table {
-    justify-content: space-evenly;
     @extend %flex;
-    width: 100px;
+    justify-content: space-between;
+    width: 100%;
     position: relative;
-    right: 6px;
-    span {
-        position: relative;
-        top: 10px;
-        left: 20px;
-        font-size: 15px;
+    top: 0.5rem;
+    .toman {
+        font-size: 1rem;
         font-weight: bold;
     }
 }
@@ -83,108 +99,73 @@ table tr:nth-child(6) td {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    padding-right: 1rem !important;
     .name-food {
-        font-size: 15px;
+        font-size: 1rem;
         font-weight: bold;
-        width: 170px;
         position: relative;
+        left: 2%;
         @extend %flex;
     }
     #price {
-        font-size: 19.3px;
+        font-size: 1.2rem;
         font-weight: bold;
         position: relative;
-        top: 10px;
-        width: 73px;
     }
 }
 
-#message {
-    position: relative;
-    top: 10px;
-    color: green;
-}
-
-#err {
-    position: relative;
-    top: 10px;
-    color: red;
-}
-
 .total-table {
-    justify-content: space-evenly;
     @extend %flex;
-    width: 100px;
+    justify-content: space-between;
+    position: relative;
+    left: 57%;
     span {
         position: relative;
-        top: 54px;
-        font-size: 17.4px;
+        top: 4.1rem;
+        font-size: 1.1rem;
         font-weight: bold;
-        right: 32px;
+        right: 66%;
     }
 }
 
 #total {
     position: relative;
-    top: 55px;
-    right: 60px;
-    font-size: 22.8px;
+    top: 4rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    width: 92px;
-}
-
-#toman {
-    position: relative;
-    top: 65px;
-    right: 43px;
-    font-size: 17.4px;
-    font-weight: bold;
-}
-
-.my-product-remove {
-    position: relative;
-    left: 66px;
-    bottom: 2px;
 }
 
 .input-group {
     display: flex !important;
     align-items: center !important;
     position: relative;
-    top: 12px;
+    width: 155% !important;
     .form-control {
+        @extend %flex;
         position: relative;
-        bottom: 4px;
-        font-size: 28.1px;
+        bottom: 0.25rem;
+        font-size: 1.8rem;
         font-weight: bold;
-        height: 50px;
         background-color: transparent;
         outline: none;
         border: none;
     }
+    .pm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 3rem;
+    }
 }
 
-.pluss {
-    position: relative;
-    left: 23px;
-    bottom: 12px;
-    object-fit: contain;
+.footer {
+    @extend %flex;
+    justify-content: space-around;
 }
 
-.minuse {
+.Discount {
     position: relative;
-    left: 33px;
-    top: 8px;
-    object-fit: contain;
-}
-
-.Gradient {
-    width: 486px;
-    position: relative;
-    top: 602px;
-    left: 7px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f4f4f4);
-    transform: rotate(-180deg);
 }
 
 .orders {
@@ -198,7 +179,7 @@ table tr:nth-child(6) td {
         @extend %flex;
         justify-content: space-evenly;
         span {
-            font-size: 14px;
+            font-size: 0.9rem;
             font-weight: bold;
         }
     }
@@ -209,27 +190,15 @@ table tr:nth-child(6) td {
     justify-content: space-around;
     align-items: flex-start;
     flex-direction: column;
-    height: 100px;
-    font-size: 19.3px;
+    font-size: 1.2rem;
     font-weight: bold;
-    #sum {
-        width: 70px;
-    }
-    #service {
-        width: 70px;
-    }
-    #takhfif {
-        width: 70px;
-    }
 }
 
 .tatal-final {
     @extend %flex;
-    font-size: 35px;
+    justify-content: space-evenly;
+    font-size: 2.1rem;
     font-weight: bold;
-    #my-cart-grand-total {
-        width: 146px;
-    }
 }
 
 input {
@@ -242,26 +211,21 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 17vhx;
     .form-control {
-        width: 217px;
-        height: 45.6px;
+        height: 2.9rem;
         border-radius: 22.8px;
-        border: solid 1.2px #e67e22;
-        position: relative;
-        bottom: 10px;
+        border: solid 0.1rem #e67e22;
     }
      ::placeholder {
-        font-size: 21.1px;
+        font-size: 1.3rem;
         font-weight: bold;
         color: #e67e22;
     }
     .btn-submit {
-        width: 217px;
-        height: 67.9px;
+        height: 4.24rem;
         border-radius: 11.7px;
         background-color: #e67e22;
-        font-size: 29.3px;
+        font-size: 1.9rem;
         font-weight: bold;
         text-align: center;
         color: white;
@@ -271,18 +235,20 @@ input {
 .shape {
     display: block;
     position: absolute;
-    bottom: 102px;
-    left: 2px;
+    bottom: 20.7%;
+    left: 0;
 }
 
 .Toman {
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: bold;
+    position: relative;
+    right: 6%;
 }
 
 .correct {
     display: none;
     position: absolute;
-    bottom: 102px;
-    left: 6px;
+    bottom: 21.7%;
+    left: 2%;
 }
